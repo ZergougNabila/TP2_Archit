@@ -1,5 +1,5 @@
 
-public class Etudiant {
+public abstract class Etudiant {
 
 		private int matricule;
 	    private String nom;

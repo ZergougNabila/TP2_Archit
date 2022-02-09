@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UniversiteRepository {
+public abstract class UniversiteRepository implements IEtdRep{
 	
 	
 	Universite GetById(int universityId) throws SQLException {
