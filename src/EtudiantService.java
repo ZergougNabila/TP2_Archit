@@ -5,7 +5,6 @@ public class EtudiantService implements IEtdSrv{
 	public boolean inscription (int matricule, String nom, String prénom, String email,String pwd, int id_universite) throws SQLException	
 	{
 		IEtdRep StudRep= new EtudiantRepository();
-	    EtudiantFactory stud = new EtudiantFactory();
 	    System.out.println("Log: début de l'opération d'ajout de l'étudiant avec matricule "+matricule);
 	    
 	    if(email == null || email.length() == 0)
@@ -23,10 +22,7 @@ public class EtudiantService implements IEtdSrv{
 	        return false;
 	    }
 		
-		 StudRep.add(stud);
-		 System.out.println("Log: Fin de l'opération d'ajout de l'étudiant avec matricule "+matricule);
-		 return true;
-	}
+		 	}
 	
 	public void AddNbrBooksAllStudent (TypePackage pac) throws SQLException
 	{
@@ -35,11 +31,11 @@ public class EtudiantService implements IEtdSrv{
 		 {
 			 if (pac == TypePackage.Standard)
 		     {
-				 E.setNbLivreMensuel_Autorise(15);
+				 E.setNbLivreMensuel_Autorise(20);
 		     }
 		     else if (pac == TypePackage.Premium)
 		     {
-		    	 E.setNbLivreMensuel_Autorise(15*2);
+		    	 E.setNbLivreMensuel_Autorise(20*2);
 		     } 
 		}
 	}
