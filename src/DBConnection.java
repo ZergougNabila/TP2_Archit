@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /* to implement the singleton pattern: j'ai changer l'accée du constructeur de publique (public) a privé (private)
  * En plus j'ai ajouté une instance 'instance' et j'ai ajouté la methode 'getInstance()' qui retourne 'instance'*/
 
-public class DBConnection {
+public class DBConnection implements InterfaceDBConnection{
 	   
 		String BDD = "bibliothèque numérique";
 		String url = "jdbc:mysql://localhost:3306/" + BDD;
